@@ -1,0 +1,16 @@
+
+<section id="show_task" class="section">
+  <h1 id="task_title"><%= @task.title %></h1>
+
+  <p id="task_description"><%= @task.description %></p>
+
+  <form action="/tasks/<%= @task.id %>/edit" method="get">
+    <input type="hidden" name="_method" value="get">
+    <input type="submit" value="Edit Task"/>
+    </form>
+
+  <form action="/tasks/<%= @task.id %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete Task"/>
+  </form>
+</section>

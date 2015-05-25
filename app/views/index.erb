@@ -1,0 +1,12 @@
+<section>
+  <div>
+    <h1>All Current Tasks</h1>
+  </div>
+
+  <div>
+    <% @tasks.each do |task| %>
+        <h3><a href="/tasks/<%= task.id %>"><%= task.title %></h3>
+    <% end %>
+  </div>
+
+</section>
